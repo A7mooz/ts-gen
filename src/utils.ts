@@ -1,4 +1,3 @@
-import { execSync } from 'child_process';
 import fs from 'fs';
 import merge from 'merge';
 import path from 'path';
@@ -19,7 +18,11 @@ export function create(
 
     fs.cpSync(source, dir, { recursive: true });
 
-    execSync(`cd ${dir} && npm pkg set name=${name}`);
+    const pkg = readJson(path.join(dir, 'package.json'));
+
+    pkg.name = name;
+
+    writeJson(path.join(dir, 'package.json'), pkg);
 
     if (lint) cpShared('eslint', dir);
     if (hooks) {
