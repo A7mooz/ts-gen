@@ -1,0 +1,6 @@
+CHANGELOG.md
+LICENSE.md
+dist/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json

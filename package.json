@@ -1,0 +1,70 @@
+{
+    "name": "@a7mooz/ts-gen",
+    "version": "0.0.1",
+    "description": "Typescript/JavaScript project generator",
+    "scripts": {
+        "build": "tsup",
+        "lint": "eslint src/**/*.ts --fix",
+        "pretty": "prettier -w .",
+        "fmt": "pnpm pretty && pnpm lint",
+        "dev": "pnpm build --silent && ./dist/bin.mjs",
+        "prepare": "husky install"
+    },
+    "bin": "dist/bin.mjs",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "exports": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.js"
+    },
+    "directories": {
+        "lib": "src"
+    },
+    "files": [
+        "dist",
+        "template"
+    ],
+    "keywords": [
+        "typescript",
+        "javascript",
+        "ts",
+        "js",
+        "cli"
+    ],
+    "author": "A7mooz",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/A7mooz/ts-gen.git"
+    },
+    "bugs": {
+        "url": "https://github.com/A7mooz/ts-gen/issues"
+    },
+    "homepage": "https://github.com/A7mooz/ts-gen#readme",
+    "dependencies": {
+        "@clack/prompts": "^0.7.0",
+        "colorette": "^2.0.20",
+        "execa": "^8.0.1",
+        "gradient-string": "^2.0.2",
+        "merge": "^2.1.1"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.7.1",
+        "@commitlint/config-conventional": "^17.7.0",
+        "@types/gradient-string": "^1.1.2",
+        "@types/node": "^18.17.14",
+        "@typescript-eslint/eslint-plugin": "^6.6.0",
+        "@typescript-eslint/parser": "^6.6.0",
+        "eslint": "^8.48.0",
+        "eslint-config-prettier": "^9.0.0",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.8",
+        "pretty-quick": "^3.1.3",
+        "tsup": "^7.2.0",
+        "typescript": "^5.2.2"
+    },
+    "engines": {
+        "node": ">=16.11.0"
+    }
+}

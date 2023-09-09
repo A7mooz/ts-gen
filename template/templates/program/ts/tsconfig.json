@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "Node16",
+        "rootDir": "src",
+        "baseUrl": "src",
+        "paths": {},
+        "resolveJsonModule": true,
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+        "sourceMap": true
+    }
+}

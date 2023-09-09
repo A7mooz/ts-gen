@@ -1,0 +1,27 @@
+name: NPM / Publish
+
+on:
+    workflow_run:
+        workflows: ['release-please']
+        types: [completed]
+
+jobs:
+    test-and-publish:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: latest
+                  run_install: |
+                      args: [--strict-peer-dependencies]
+            - run: pnpm run fmt
+            - run: pnpm exec tsc --noEmit
+            - run: pnpm run build
+            - uses: JS-DevTools/npm-publish@v2
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
+                  access: 'public'

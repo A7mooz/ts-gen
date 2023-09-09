@@ -1,0 +1,29 @@
+{
+    "name": "name",
+    "version": "2.0.0",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "rimraf dist && tsc",
+        "start": "node --enable-source-maps .",
+        "prod": "npm run build && npm start",
+        "dev": "npm run build && npm start",
+        "watch": "tsc-watch --onSuccess \"npm start\"",
+        "watch:strict": "npm run watch --onCompilationStarted \"rimraf dist\" -b -f",
+        "pretty": "prettier -w  ."
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "prettier": "^2.8.8",
+        "rimraf": "^5.0.1",
+        "tsc-watch": "^6.0.4",
+        "typescript": "^5.1.6"
+    },
+    "prettier": {
+        "semi": true,
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 100,
+        "tabWidth": 4
+    }
+}
