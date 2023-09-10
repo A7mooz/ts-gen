@@ -7,6 +7,7 @@ const shared: Options = {
     minify: true,
     splitting: false,
     sourcemap: true,
+    shims: true,
 };
 
 export default defineConfig([
@@ -20,6 +21,5 @@ export default defineConfig([
         ...shared,
         entry: ['src/bin.ts'],
         format: ['esm'],
-        shims: true,
     },
 ]);
