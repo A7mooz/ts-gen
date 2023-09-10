@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/A7mooz/ts-gen/compare/v1.0.2...v1.0.3) (2023-09-10)
+
+
+### Bug Fixes
+
+* scanning template dir from dist ([016c065](https://github.com/A7mooz/ts-gen/commit/016c065b8070d1e1f3b1b3ca89b8926ace9d0dc8))
+
 ## [1.0.2](https://github.com/A7mooz/ts-gen/compare/v1.0.1...v1.0.2) (2023-09-10)
 
 
