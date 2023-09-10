@@ -20,5 +20,6 @@ export default defineConfig([
         ...shared,
         entry: ['src/bin.ts'],
         format: ['esm'],
+        shims: true,
     },
 ]);
