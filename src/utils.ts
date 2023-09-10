@@ -27,11 +27,21 @@ export function create(
     if (lint) cpShared('eslint', dir);
     if (hooks) {
         cpShared('husky', dir);
-        if (lint)
+        if (lint) {
             fs.appendFileSync(
                 path.join(dir, '.husky', 'pre-commit'),
                 ` && npm lint\n`,
             );
+
+            const lintstagedrc = path.join(dir, '.lintstagedrc.json');
+
+            writeJson(
+                lintstagedrc,
+                merge(readJson(lintstagedrc), {
+                    'src/**.{mjs,js,cjs,ts,tsx}': 'eslint --fix',
+                }),
+            );
+        }
     }
     if (commitLint) cpShared('commit_lint', dir);
 }
