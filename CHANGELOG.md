@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/A7mooz/ts-gen/compare/v1.0.3...v1.0.4) (2023-09-10)
+
+
+### Bug Fixes
+
+* made commit-msg executable ([58ef8f5](https://github.com/A7mooz/ts-gen/commit/58ef8f5d7d51fa1159035b3a20b1fad886f18644))
+
 ## [1.0.3](https://github.com/A7mooz/ts-gen/compare/v1.0.2...v1.0.3) (2023-09-10)
 
 
