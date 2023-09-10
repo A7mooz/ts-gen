@@ -84,7 +84,7 @@ function writeJson(path: string, data: unknown) {
     fs.writeFileSync(path, json);
 }
 
-export const templateDir = path.join(__dirname, 'template');
+export const templateDir = path.join(__dirname, '../', 'template');
 
 export const templates = fs.readdirSync(path.join(templateDir, 'templates'));
 
