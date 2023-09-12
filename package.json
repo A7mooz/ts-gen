@@ -23,7 +23,8 @@
     },
     "files": [
         "dist",
-        "template"
+        "template",
+        "template/**/.gitignore"
     ],
     "keywords": [
         "typescript",
