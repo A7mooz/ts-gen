@@ -2,8 +2,8 @@ name: NPM / Publish
 
 on:
     workflow_run:
-        workflows: ['release-please']
-        types: [completed]
+        release:
+            types: [released]
 
 jobs:
     test-and-publish:
