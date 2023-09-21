@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/A7mooz/ts-gen/compare/v1.0.4...v1.0.5) (2023-09-21)
+
+
+### Bug Fixes
+
+* .gitignore files are removed by npm ([f09711e](https://github.com/A7mooz/ts-gen/commit/f09711eafb4d0875af05a514111570c194a18413))
+
 ## [1.0.4](https://github.com/A7mooz/ts-gen/compare/v1.0.3...v1.0.4) (2023-09-10)
 
 
