@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm exec tsc && pnpm run build && pnpm exec lint-staged
+pnpm exec tsc && pnpm run build-fast && pnpm exec lint-staged

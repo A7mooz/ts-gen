@@ -4,10 +4,11 @@
     "description": "Typescript/JavaScript project generator",
     "scripts": {
         "build": "tsup",
+        "build-fast": "tsup --no-dts",
         "lint": "eslint src/**/*.ts --fix",
         "pretty": "prettier -w .",
         "fmt": "pnpm pretty && pnpm lint",
-        "dev": "pnpm build --silent && ./dist/bin.mjs",
+        "dev": "pnpm build-fast --silent && ./dist/bin.mjs",
         "prepare": "husky install"
     },
     "bin": "dist/bin.mjs",
