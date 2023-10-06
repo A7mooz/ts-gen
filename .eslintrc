@@ -3,7 +3,6 @@
     "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
     "parserOptions": { "ecmaVersion": "latest", "sourceType": "script" },
     "rules": {
-        "indent": "error",
         "@typescript-eslint/no-non-null-assertion": "off",
         "quotes": [
             2,
