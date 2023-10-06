@@ -58,7 +58,7 @@ function cpShared(name: string, dir: string) {
 
     fs.cpSync(source, dir, {
         recursive: true,
-        filter: (src) => src !== `${source}/package.json`,
+        filter: (src) => path.basename(src) !== 'package.json',
     });
 
     combine(path.join(dir, 'package.json'), path.join(source, 'package.json'));
