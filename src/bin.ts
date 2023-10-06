@@ -132,7 +132,7 @@ async function main() {
 
         await execa('git', ['init', '-b', 'main']);
 
-        spinner.start('Git initialized');
+        spinner.stop('Git initialized');
     }
 
     spinner.start('Installing packages');
