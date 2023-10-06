@@ -37,7 +37,7 @@ async function main() {
         }
     }
 
-    const { pkgMgr, ...options } = await p.group<Prompts>(
+    const { pkgMgr, git, ...options } = await p.group<Prompts>(
         {
             lang: () =>
                 p.select({
@@ -56,21 +56,32 @@ async function main() {
                     message: 'What is your project type?',
                     options: templates.map((v) => ({ value: v })),
                 }),
-            lint: () =>
+            git: () =>
                 p.confirm({
-                    message: 'Do you want to add linting?',
+                    message: 'Do you want to initialize git?',
                     initialValue: true,
                 }),
-            hooks: () =>
-                p.confirm({
-                    message: 'Do you want to add git hooks with husky?',
-                    initialValue: true,
-                }),
+            lint: ({ results }) =>
+                results.git
+                    ? p.confirm({
+                          message: 'Do you want to add linting?',
+                          initialValue: true,
+                      })
+                    : Promise.resolve(false),
+            hooks: ({ results }) =>
+                results.git
+                    ? p.confirm({
+                          message: 'Do you want to add git hooks with husky?',
+                          initialValue: true,
+                      })
+                    : Promise.resolve(false),
             commitLint: ({ results }) =>
-                p.confirm({
-                    message: 'Do you want to add git commit linting?',
-                    initialValue: results.hooks,
-                }),
+                results.hooks
+                    ? p.confirm({
+                          message: 'Do you want to add git commit linting?',
+                          initialValue: true,
+                      })
+                    : Promise.resolve(false),
             pkgMgr: () =>
                 p.select({
                     message: 'What package manager do you want to use?',
@@ -99,7 +110,13 @@ async function main() {
 
     process.chdir(dir);
 
-    await execa('git', ['init', '-b', 'main']);
+    if (git) {
+        spinner.start('Initializing git');
+
+        await execa('git', ['init', '-b', 'main']);
+
+        spinner.start('Git initialized');
+    }
 
     spinner.start('Installing packages');
 
