@@ -1,9 +1,8 @@
 name: NPM / Publish
 
 on:
-    workflow_run:
-        release:
-            types: [released]
+    release:
+        types: [released]
 
 jobs:
     test-and-publish:
