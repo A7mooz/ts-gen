@@ -5,6 +5,7 @@ import * as color from 'colorette';
 import { execa } from 'execa';
 import fs from 'fs';
 import gradient from 'gradient-string';
+import path from 'path';
 import type { Prompts } from './types.js';
 import { create, templates } from './utils.js';
 
@@ -134,6 +135,25 @@ async function main() {
 
         spinner.stop('Git initialized');
     }
+
+    // Change pack managers
+
+    if (options.hooks)
+        for (const hook of fs.readdirSync('.husky')) {
+            const file = path.join('.husky', hook);
+
+            fs.writeFileSync(
+                file,
+                fs
+                    .readFileSync(file, { encoding: 'utf-8' })
+                    .replaceAll('npm', pkgMgr),
+            );
+        }
+
+    fs.writeFileSync(
+        'package.json',
+        fs.readFileSync('package.json', 'utf-8').replaceAll('npm', pkgMgr),
+    );
 
     spinner.start('Installing packages');
 
