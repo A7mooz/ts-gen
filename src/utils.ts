@@ -42,7 +42,7 @@ export function create(
             writeJson(
                 lintstagedrc,
                 merge(readJson(lintstagedrc), {
-                    'src/**.{mjs,js,cjs,ts,tsx}': 'eslint --fix',
+                    'src/**/*.{mjs,js,cjs,ts,tsx}': 'eslint --fix',
                 }),
             );
         }
