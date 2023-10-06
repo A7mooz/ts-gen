@@ -56,6 +56,23 @@ async function main() {
                     message: 'What is your project type?',
                     options: templates.map((v) => ({ value: v })),
                 }),
+            moduleType: ({ results }) =>
+                results.type === 'library'
+                    ? Promise.resolve('commonjs')
+                    : p.select({
+                          message: 'What module type you prefer?',
+                          options: [
+                              {
+                                  value: 'module',
+                                  label: 'EcmaScript (ESM)',
+                                  hint: 'recommended',
+                              },
+                              {
+                                  value: 'commonjs',
+                                  label: 'Common JS (CJS)',
+                              },
+                          ],
+                      }),
             git: () =>
                 p.confirm({
                     message: 'Do you want to initialize git?',

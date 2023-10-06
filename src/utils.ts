@@ -12,6 +12,7 @@ export function create(
         lint = true,
         hooks = true,
         commitLint = true,
+        moduleType = type === 'library' ? 'commonjs' : 'module',
     }: CreateOptions,
 ) {
     const source = path.join(templateDir, 'templates', type, lang);
@@ -21,6 +22,9 @@ export function create(
     const pkg = readJson(path.join(dir, 'package.json'));
 
     pkg.name = name;
+
+    if (moduleType === 'commonjs') delete pkg.type;
+    else pkg.type = moduleType;
 
     writeJson(path.join(dir, 'package.json'), pkg);
 
