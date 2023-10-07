@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/A7mooz/ts-gen/compare/v1.1.3...v1.1.4) (2023-10-07)
+
+
+### Bug Fixes
+
+* action was ignoring .gitignore even in templates ([dcca1f1](https://github.com/A7mooz/ts-gen/commit/dcca1f1694c4e0e926735ae21c7bc78e145fa646))
+
 ## [1.1.3](https://github.com/A7mooz/ts-gen/compare/v1.1.2...v1.1.3) (2023-10-07)
 
 
