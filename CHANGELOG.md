@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/A7mooz/ts-gen/compare/v1.1.4...v1.1.5) (2023-10-07)
+
+
+### Bug Fixes
+
+* auto-build ([4c194ca](https://github.com/A7mooz/ts-gen/commit/4c194ca1101590a7bce78db666bf94e2bb6e9c51))
+
 ## [1.1.3](https://github.com/A7mooz/ts-gen/compare/v1.1.2...v1.1.3) (2023-10-07)
 
 
