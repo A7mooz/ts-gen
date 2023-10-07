@@ -20,6 +20,6 @@ jobs:
             - run: pnpm run fmt
             - run: pnpm exec tsc --noEmit
             - run: pnpm run build
-            - run: pnpm publish --ignore-scripts --no-git-checks --access public
+            - run: npm publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
