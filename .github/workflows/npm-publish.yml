@@ -16,11 +16,10 @@ jobs:
               with:
                   version: latest
                   run_install: |
-                      args: [--strict-peer-dependencies]
+                      args: [--strict-peer-dependencies, --frozen-lockfile]
             - run: pnpm run fmt
             - run: pnpm exec tsc --noEmit
             - run: pnpm run build
-            - uses: JS-DevTools/npm-publish@v2
-              with:
-                  token: ${{ secrets.NPM_TOKEN }}
-                  access: 'public'
+            - run: pnpm publish --ignore-scripts --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
