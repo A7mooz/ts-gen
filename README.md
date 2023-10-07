@@ -20,7 +20,7 @@
   </div>
 </div>
 
-# Run
+# CLI
 
 ```bash
 $ npx @a7mooz/ts-gen@latest
@@ -30,4 +30,76 @@ $ pnpx @a7mooz/ts-gen
 $ yarn dlx @a7mooz/ts-gen
 ```
 
-Note: no matter of your package manager you need to have [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed to run this binary
+# API
+
+## Installation
+
+```bash
+$ npm install @a7mooz/ts-gen
+// Or
+$ pnpm add @a7mooz/ts-gen
+// Or
+$ yarn add @a7mooz/ts-gen
+```
+
+## Usage
+
+### ESM
+
+```js
+import { create } from '@a7mooz/ts-gen';
+
+create('project/path', {
+    type: 'library',
+    lang: 'ts',
+    name: 'name',
+    lint: true,
+    hooks: true,
+    commitLint: true,
+});
+```
+
+### CJS
+
+```js
+const { create } = require('@a7mooz/ts-gen');
+
+create('project/path', {
+    type: 'library',
+    lang: 'ts',
+    name: 'name',
+    lint: true,
+    hooks: true,
+    commitLint: true,
+});
+```
+
+### Options
+
+-   name?: string
+
+    The project's name (defaults to the dir's basename)
+
+-   type: string
+
+    The project's type (must be one of the available templates in `template/templates`)
+
+-   lang: 'ts' | 'js'
+
+    The project's language
+
+-   lint?: boolean
+
+    Whether to add linting (default `true`)
+
+-   hooks?: boolean
+
+    Whether to add husky git hooks (default `true`)
+
+-   commitLint?: boolean
+
+    Whether to add commit linting (only works with git hooks) (defaults to `hooks` option)
+
+-   moduleType?: 'module' | 'commonjs'
+
+    The module type (default `module` if a program and `commonjs` if a library)
