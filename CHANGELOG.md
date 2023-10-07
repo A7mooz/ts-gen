@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.0](https://github.com/A7mooz/ts-gen/compare/v1.0.5...v1.1.0) (2023-10-07)
+
+
+### Features
+
+* added git confirmation ([4cc791d](https://github.com/A7mooz/ts-gen/commit/4cc791d259122ffd3614f27e91617c9ed86bfb7e))
+* added module type selection ([28d8ac4](https://github.com/A7mooz/ts-gen/commit/28d8ac49f573ba70f552daaa5240cb38da1d36e9))
+* package manager specific changes ([6ae4393](https://github.com/A7mooz/ts-gen/commit/6ae439396ad5754ff896009b273e0ddf837d4190))
+
+
+### Bug Fixes
+
+* commitLint should default to hooks ([0681d6e](https://github.com/A7mooz/ts-gen/commit/0681d6e51a000f2a2e8731557290472a73936769))
+* intent overlap with prettier configs ([d9a9140](https://github.com/A7mooz/ts-gen/commit/d9a91400c9679432115e6aaa0dee2aec1b5167de))
+* issue with the new node version ([3e87e2a](https://github.com/A7mooz/ts-gen/commit/3e87e2ad1c6626b0f8c76335f8a10b1afa47c773))
+* lint-staged glob inaccuracy ([00ea12d](https://github.com/A7mooz/ts-gen/commit/00ea12d3bbe07902050e6789b79095a2be7e8ceb))
+* npm ignored .gitignore (again) ([5b78b79](https://github.com/A7mooz/ts-gen/commit/5b78b7947efd1cd662fc19aecda1778e39f46e44))
+* oopsie ([be71193](https://github.com/A7mooz/ts-gen/commit/be7119331d2f4f9edf20b3d15ffa0c72bf86b6d2))
+
 ## [1.0.5](https://github.com/A7mooz/ts-gen/compare/v1.0.4...v1.0.5) (2023-09-21)
 
 
