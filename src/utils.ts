@@ -11,7 +11,7 @@ export function create(
         lang,
         lint = true,
         hooks = true,
-        commitLint = true,
+        commitLint = hooks,
         moduleType = type === 'library' ? 'commonjs' : 'module',
     }: CreateOptions,
 ) {
