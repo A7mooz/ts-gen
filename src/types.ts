@@ -1,10 +1,12 @@
+export type Symbolize<T extends object> = {
+    [x in keyof T]: T[x] | symbol;
+};
+
 export type Prompts = Required<
-    Omit<
-        {
-            [x in keyof CreateOptions]: CreateOptions[x] | symbol;
-        } & { pkgMgr: string | symbol; git: boolean | symbol },
-        'name'
-    >
+    Omit<Symbolize<CreateOptions>, 'name'> & {
+        pkgMgr: string | symbol;
+        git: boolean | symbol;
+    }
 >;
 
 export interface CreateOptions {
