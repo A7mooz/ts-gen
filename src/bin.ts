@@ -2,4 +2,4 @@
 
 import { main } from './helpers/main.js';
 
-main().catch(console.error);
+await main();
