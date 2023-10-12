@@ -1,6 +1,6 @@
 {
     "name": "@a7mooz/ts-gen",
-    "version": "1.1.5",
+    "version": "1.2.0",
     "description": "Typescript/JavaScript project generator",
     "scripts": {
         "build": "tsup",

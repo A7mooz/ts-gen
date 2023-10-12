@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/A7mooz/ts-gen/compare/v1.1.5...v1.2.0) (2023-10-12)
+
+
+### Features
+
+* added repo link question ([75dbef9](https://github.com/A7mooz/ts-gen/commit/75dbef98613b316537f3918dcaee50ec5b6e12e3))
+
+
+### Bug Fixes
+
+* added the extention of the file ([cefbbc6](https://github.com/A7mooz/ts-gen/commit/cefbbc6aa2b853496a44d617afc65a088ee3e847))
+* error handling not stoping the code ([1d2e6af](https://github.com/A7mooz/ts-gen/commit/1d2e6af3d566da7c1fe7996c97269f649f8dbf1a))
+* improved linting staged files ([8727651](https://github.com/A7mooz/ts-gen/commit/87276516807eda985eb1db452d8a8454f24aee3c))
+
 ## [1.1.5](https://github.com/A7mooz/ts-gen/compare/v1.1.4...v1.1.5) (2023-10-07)
 
 
