@@ -23,11 +23,11 @@
 # CLI
 
 ```bash
-$ npx @a7mooz/ts-gen@latest
+$ npx ts-gen@latest
 // Or
-$ pnpx @a7mooz/ts-gen
+$ pnpx ts-gen
 // Or (only yarn v3 and above)
-$ yarn dlx @a7mooz/ts-gen
+$ yarn dlx ts-gen
 ```
 
 # API
