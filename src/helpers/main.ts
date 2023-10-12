@@ -27,6 +27,9 @@ export async function main() {
 
         await execa('git', ['init', '-b', 'main']);
 
+        if (options.repo)
+            await execa('git', ['remote', 'add', 'origin', options.repo]);
+
         s.stop('Git initialized');
     }
 

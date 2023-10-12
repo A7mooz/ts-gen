@@ -12,6 +12,7 @@ export function create(
         lint = true,
         hooks = true,
         commitLint = hooks,
+        repo,
         moduleType = type === 'library' ? 'commonjs' : 'module',
     }: CreateOptions,
 ) {
@@ -48,6 +49,22 @@ export function create(
         }
     }
     if (commitLint) cpShared('commit_lint', dir);
+    if (repo) {
+        cpShared('repo', dir);
+
+        if (!repo.match(/^https?:\/\//)) repo = `https://${repo}`;
+
+        const url = new URL(repo);
+
+        fs.writeFileSync(
+            path.join(dir, 'package.json'),
+            fs
+                .readFileSync(path.join(dir, 'package.json'), {
+                    encoding: 'utf-8',
+                })
+                .replaceAll('https://url', url.href.replace(/\/$/, '')),
+        );
+    }
 }
 
 function cpShared(name: string, dir: string) {

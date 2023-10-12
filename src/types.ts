@@ -16,5 +16,6 @@ export interface CreateOptions {
     lint?: boolean;
     hooks?: boolean;
     commitLint?: boolean;
+    repo?: string;
     moduleType?: 'module' | 'commonjs';
 }

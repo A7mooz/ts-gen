@@ -71,6 +71,19 @@ export async function ask() {
                     message: 'Do you want to initialize git?',
                     initialValue: true,
                 }),
+            repo: () =>
+                text({
+                    message: "What's your repo link (doesn't have to exist)",
+                    placeholder: 'https://',
+                    validate(value) {
+                        if (!value) return;
+
+                        if (!value.match(/^https?:\/\//))
+                            value = `https://${value}`;
+
+                        if (!URL.canParse(value)) return 'Invalid URL fromat';
+                    },
+                }),
             lint: ({ results }) =>
                 results.git
                     ? confirm({
@@ -109,6 +122,9 @@ export async function ask() {
             },
         },
     );
+
+    if (options.repo && !options.repo.match(/^https?:\/\//))
+        options.repo = `https://${options.repo}`;
 
     return { dir, options, pkgMgr, git };
 }

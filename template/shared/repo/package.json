@@ -1,0 +1,10 @@
+{
+    "repository": {
+        "type": "git",
+        "url": "git+https://url.git"
+    },
+    "bugs": {
+        "url": "https://url/issues"
+    },
+    "homepage": "https://url#readme"
+}
