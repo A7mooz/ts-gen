@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/A7mooz/ts-gen/compare/v1.2.0...v1.2.1) (2023-10-12)
+
+
+### Bug Fixes
+
+* simplified the bin name ([388f763](https://github.com/A7mooz/ts-gen/commit/388f763dbdb3d8b294b8421baafd70b9a1212324))
+
 ## [1.2.0](https://github.com/A7mooz/ts-gen/compare/v1.1.5...v1.2.0) (2023-10-12)
 
 
