@@ -9,6 +9,7 @@
         "pretty": "prettier -w .",
         "fmt": "pnpm pretty && pnpm lint",
         "dev": "pnpm build-fast --silent && ./dist/bin.mjs",
+        "dev:win": "pnpm build-fast --silent && node --enable-source-maps dist/bin.mjs",
         "prepare": "husky install"
     },
     "bin": {
