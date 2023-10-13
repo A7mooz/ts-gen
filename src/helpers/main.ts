@@ -6,11 +6,11 @@ import { create } from '../utils.js';
 import { PackageManager } from './package-manager.js';
 import { ask } from './questions.js';
 
-export async function main() {
+export async function main(args: string[]) {
     console.clear();
     intro(bgMagentaBright(' ts-gen '));
 
-    const { options, dir, git, pkgMgr } = await ask();
+    const { options, dir, git, pkgMgr } = await ask(args);
 
     const s = spinner();
 

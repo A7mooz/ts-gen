@@ -4,14 +4,16 @@ import { existsSync, readdirSync } from 'fs';
 import type { Prompts } from '../types';
 import { templates } from '../utils.js';
 
-export async function ask() {
-    const dir = await text({
-        message: `Where you want the project to be? ${dim(
-            '(leave blank to use the current directory)',
-        )}`,
-        defaultValue: '.',
-        placeholder: './my-app',
-    });
+export async function ask(args: string[]) {
+    const dir =
+        args[0] ||
+        (await text({
+            message: `Where you want the project to be? ${dim(
+                '(leave blank to use the current directory)',
+            )}`,
+            defaultValue: '.',
+            placeholder: './my-app',
+        }));
 
     if (isCancel(dir)) {
         cancel('Operation cancelled');

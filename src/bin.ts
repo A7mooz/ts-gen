@@ -2,4 +2,6 @@
 
 import { main } from './helpers/main.js';
 
-await main();
+const args = process.argv.slice(2);
+
+await main(args);
