@@ -21,5 +21,8 @@ export default defineConfig([
         ...shared,
         entry: ['src/bin.ts'],
         format: ['esm'],
+        banner: {
+            js: '#!/usr/bin/env -S node --enable-source-maps',
+        },
     },
 ]);
