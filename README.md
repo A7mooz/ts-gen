@@ -25,9 +25,9 @@
 ```bash
 $ npx ts-gen@latest
 // Or
-$ pnpx ts-gen
+$ pnpm dlx @a7mooz/ts-gen
 // Or (only yarn v3 and above)
-$ yarn dlx ts-gen
+$ yarn dlx @a7mooz/ts-gen
 ```
 
 # API
