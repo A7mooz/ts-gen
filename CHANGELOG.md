@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/A7mooz/ts-gen/compare/v1.2.1...v1.3.0) (2023-10-14)
+
+
+### Features
+
+* added args ([7b6a058](https://github.com/A7mooz/ts-gen/commit/7b6a0582b7ef6b61c5b6ecfd3b7d78166a85a22a))
+
+
+### Bug Fixes
+
+* other package manager don't support this syntax ([169ac60](https://github.com/A7mooz/ts-gen/commit/169ac602291b1b5550ee3c63fc91d9fb71673721))
+
 ## [1.2.1](https://github.com/A7mooz/ts-gen/compare/v1.2.0...v1.2.1) (2023-10-12)
 
 
