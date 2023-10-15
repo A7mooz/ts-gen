@@ -23,7 +23,7 @@
 # CLI
 
 ```bash
-$ npx ts-gen@latest
+$ npx @a7mooz/ts-gen@latest
 // Or
 $ pnpm dlx @a7mooz/ts-gen
 // Or (only yarn v3 and above)
