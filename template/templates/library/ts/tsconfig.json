@@ -13,7 +13,8 @@
         "declaration": true,
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
-        "noEmit": true
+        "noEmit": true,
+        "types": ["node"]
     },
     "exclude": ["node_modules", "dist"],
     "include": ["src"]
