@@ -1,7 +1,5 @@
-import { test } from 'vitest';
-
-import { expect } from 'vitest';
-import { ok } from '..';
+import { expect, test } from 'vitest';
+import { ok } from '../src/index.js';
 
 test('"ok" must be a string', () => {
     expect(ok).string('ok');
