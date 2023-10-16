@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.1](https://github.com/A7mooz/ts-gen/compare/v1.3.0...v1.3.1) (2023-10-16)
+
+
+### Bug Fixes
+
+* specified node as a global type ([af35774](https://github.com/A7mooz/ts-gen/commit/af357747d246adf4ed2fdc0fa973bd2749a911fc))
+* tests should work without build ([e2dae0d](https://github.com/A7mooz/ts-gen/commit/e2dae0d5825f9174e96b888a7b3cae3e112dc304))
+* treeshaking sourcemap issues ([03c5c44](https://github.com/A7mooz/ts-gen/commit/03c5c446138fb9c34ff089279b296cb13193db32))
+
 ## [1.3.0](https://github.com/A7mooz/ts-gen/compare/v1.2.1...v1.3.0) (2023-10-14)
 
 
