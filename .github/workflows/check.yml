@@ -11,6 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
+            - uses: wagoid/commitlint-github-action@v5
             - uses: actions/setup-node@v3
               with:
                   node-version: 18
@@ -21,4 +22,5 @@ jobs:
                       args: [--strict-peer-dependencies]
             - run: pnpm run lint
             - run: pnpm exec tsc
-            - run: pnpm run build
+            - run: pnpm run build-fast
+            - run: pnpm run test
