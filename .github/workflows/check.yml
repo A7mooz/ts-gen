@@ -19,8 +19,8 @@ jobs:
                   node-version: 20
                   check-latest: true
                   cache: 'pnpm'
-            - uses: wagoid/commitlint-github-action@v5
             - run: pnpm install --frozen-lockfile --strict-peer-dependencies
+            - uses: wagoid/commitlint-github-action@v5
             - run: pnpm run lint
             - run: pnpm exec tsc
             - run: pnpm run build-fast
