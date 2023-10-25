@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/A7mooz/ts-gen/compare/v1.3.2...v2.0.0) (2023-10-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop the node v16
+
+### Miscellaneous Chores
+
+* changed the node version ([ada0a71](https://github.com/A7mooz/ts-gen/commit/ada0a719ea267f64519037610b516226cd319ef4))
+
 ## [1.3.2](https://github.com/A7mooz/ts-gen/compare/v1.3.1...v1.3.2) (2023-10-25)
 
 
