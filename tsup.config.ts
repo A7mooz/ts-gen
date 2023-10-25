@@ -3,7 +3,7 @@ import { Options, defineConfig } from 'tsup';
 const shared: Options = {
     clean: true,
     platform: 'node',
-    target: 'node16',
+    target: 'node18',
     minify: true,
     splitting: false,
     sourcemap: true,
