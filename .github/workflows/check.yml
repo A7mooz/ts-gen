@@ -14,6 +14,8 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: 20
+                  check-latest: true
+                  cache: 'pnpm'
             - uses: pnpm/action-setup@v2
               with:
                   version: latest
