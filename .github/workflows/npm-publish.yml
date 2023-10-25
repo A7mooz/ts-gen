@@ -10,17 +10,16 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: latest
             - uses: actions/setup-node@v4
               with:
                   node-version: 20
                   check-latest: true
                   cache: 'pnpm'
                   registry-url: https://registry.npmjs.org/
-            - uses: pnpm/action-setup@v2
-              with:
-                  version: latest
-                  run_install: |
-                      args: [--strict-peer-dependencies, --frozen-lockfile]
+            - run: pnpm install --strict-peer-dependencies --frozen-lockfile
             - run: pnpm run fmt
             - run: pnpm exec tsc --noEmit
             - run: pnpm run test
