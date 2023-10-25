@@ -21,7 +21,8 @@ jobs:
                       args: [--strict-peer-dependencies, --frozen-lockfile]
             - run: pnpm run fmt
             - run: pnpm exec tsc --noEmit
+            - run: pnpm run test
             - run: pnpm run build
-            - run: npm publish --access public
+            - run: pnpm publish --ignore-scripts --no-git-checks --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
