@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/A7mooz/ts-gen/compare/v1.3.1...v1.3.2) (2023-10-25)
+
+
+### Bug Fixes
+
+* using pnpm to include gitignore ([df8449f](https://github.com/A7mooz/ts-gen/commit/df8449f4005c890adaa89b3a52398ca48e77a979))
+
 ## [1.3.1](https://github.com/A7mooz/ts-gen/compare/v1.3.0...v1.3.1) (2023-10-16)
 
 
