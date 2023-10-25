@@ -23,16 +23,16 @@ dependencies:
 
 devDependencies:
   '@commitlint/cli':
-    specifier: ^18.0.0
+    specifier: ^18.1.0
     version: 18.1.0
   '@commitlint/config-conventional':
-    specifier: ^18.0.0
+    specifier: ^18.1.0
     version: 18.1.0
   '@types/gradient-string':
     specifier: ^1.1.4
     version: 1.1.4
   '@types/node':
-    specifier: ^20.0.0
+    specifier: ^20.8.9
     version: 20.8.9
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.9.0
