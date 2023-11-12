@@ -86,13 +86,11 @@ export async function ask(args: string[]) {
                         if (!URL.canParse(value)) return 'Invalid URL fromat';
                     },
                 }),
-            lint: ({ results }) =>
-                results.git
-                    ? confirm({
-                          message: 'Do you want to add linting?',
-                          initialValue: true,
-                      })
-                    : Promise.resolve(false),
+            lint: () =>
+                confirm({
+                    message: 'Do you want to add linting?',
+                    initialValue: true,
+                }),
             hooks: ({ results }) =>
                 results.git
                     ? confirm({
