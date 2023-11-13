@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.1](https://github.com/A7mooz/ts-gen/compare/v2.0.0...v2.0.1) (2023-11-13)
+
+
+### Bug Fixes
+
+* deleted liscenses ([53bff78](https://github.com/A7mooz/ts-gen/commit/53bff782790d9268df53a1d4d3db884a0fa5192c))
+* **deps:** updated deps ([ade45c1](https://github.com/A7mooz/ts-gen/commit/ade45c11827c49b0e0a798799f3129a7fe530a8f))
+* linting doesn't rely on git ([2e80e3d](https://github.com/A7mooz/ts-gen/commit/2e80e3d78010cffdc74f56c4fc6a50be81cc598e))
+
 ## [2.0.0](https://github.com/A7mooz/ts-gen/compare/v1.3.2...v2.0.0) (2023-10-25)
 
 
