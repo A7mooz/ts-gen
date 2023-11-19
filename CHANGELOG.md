@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/A7mooz/ts-gen/compare/v2.0.1...v2.0.2) (2023-11-19)
+
+
+### Bug Fixes
+
+* **deps:** updated deps ([71b7138](https://github.com/A7mooz/ts-gen/commit/71b71388a83e7a122e9c441fa26761eadb0f8431))
+
 ## [2.0.1](https://github.com/A7mooz/ts-gen/compare/v2.0.0...v2.0.1) (2023-11-13)
 
 
