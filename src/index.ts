@@ -1,3 +1,3 @@
-export { create, templates } from './utils.js';
+export { create, templates } from './lib/utils.js';
 
-export type { CreateOptions } from './types';
+export type { CreateOptions } from './lib/types';

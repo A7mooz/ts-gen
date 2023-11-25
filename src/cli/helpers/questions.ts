@@ -1,8 +1,7 @@
+import { templates, type Prompts } from '#lib';
 import { cancel, confirm, group, isCancel, select, text } from '@clack/prompts';
 import { dim } from 'colorette';
 import { existsSync, readdirSync } from 'fs';
-import type { Prompts } from '../types';
-import { templates } from '../utils.js';
 
 export async function ask(args: string[]) {
     const dir =

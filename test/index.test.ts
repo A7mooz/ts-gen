@@ -3,8 +3,13 @@ import { $ } from 'execa';
 import { existsSync, readdirSync, rmSync } from 'fs';
 import { join } from 'path';
 import { afterAll, describe, test } from 'vitest';
-import { CreateOptions } from '../src/types.js';
-import { create, shared, templateDir, templates } from '../src/utils.js';
+import {
+    CreateOptions,
+    create,
+    shared,
+    templateDir,
+    templates,
+} from '../src/lib';
 
 const cacheDir = join(__dirname, '.cache');
 
@@ -68,8 +73,8 @@ describe('test create', () => {
                         template === 'eslint'
                             ? 'lint'
                             : template === 'husky'
-                            ? 'hooks'
-                            : camel(template)
+                              ? 'hooks'
+                              : camel(template)
                     }`]:
                         template === 'repo'
                             ? process.env.npm_package_repository_url

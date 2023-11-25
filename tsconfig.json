@@ -14,7 +14,12 @@
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
         "types": ["node"],
-        "noEmit": true
+        "noEmit": true,
+        "baseUrl": "src",
+        "paths": {
+            "#lib": ["lib/index.js"],
+            "#lib/*": ["lib/*"]
+        }
     },
     "exclude": ["node_modules", "dist"],
     "include": ["src"]

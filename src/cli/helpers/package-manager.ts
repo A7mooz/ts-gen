@@ -1,7 +1,7 @@
+import { type CreateOptions } from '#lib';
 import { execa } from 'execa';
 import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import type { CreateOptions } from '../types';
 
 /**
  * Make a new package manager controller

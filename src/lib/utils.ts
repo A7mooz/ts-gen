@@ -67,7 +67,7 @@ export function create(
     }
 }
 
-function cpShared(name: string, dir: string) {
+export function cpShared(name: string, dir: string) {
     if (!shared.includes(name))
         throw new Error(`"${name}" is not a valid shared template`);
 
@@ -81,7 +81,7 @@ function cpShared(name: string, dir: string) {
     combine(path.join(dir, 'package.json'), path.join(source, 'package.json'));
 }
 
-function sort(obj: Record<string, unknown>) {
+export function sort(obj: Record<string, unknown>) {
     return Object.keys(obj)
         .sort()
         .reduce((sorted: Record<string, unknown>, key) => {
@@ -90,7 +90,7 @@ function sort(obj: Record<string, unknown>) {
         }, {});
 }
 
-function combine(basePath: string, extendPath: string) {
+export function combine(basePath: string, extendPath: string) {
     const base = readJson(basePath);
     const extend = readJson(extendPath);
 
@@ -103,19 +103,23 @@ function combine(basePath: string, extendPath: string) {
     writeJson(basePath, combined);
 }
 
-function readJson(path: string) {
+export function readJson(path: string) {
     const json = fs.readFileSync(path, {
         encoding: 'utf-8',
     });
     return JSON.parse(json);
 }
 
-function writeJson(path: string, data: unknown) {
+export function writeJson(path: string, data: unknown) {
     const json = JSON.stringify(data, null, 4) + '\n';
     fs.writeFileSync(path, json);
 }
 
-export const templateDir = path.join(__dirname, '../', 'template');
+export const templateDir = path.resolve(
+    __dirname,
+    __dirname === 'dist' ? '..' : '../..',
+    'template',
+);
 
 export const templates = fs.readdirSync(path.join(templateDir, 'templates'));
 

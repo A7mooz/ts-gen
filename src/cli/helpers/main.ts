@@ -1,8 +1,8 @@
+import { create } from '#lib';
 import { intro, log, outro, spinner } from '@clack/prompts';
 import { bgMagentaBright } from 'colorette';
 import { execa } from 'execa';
 import gradient from 'gradient-string';
-import { create } from '../utils.js';
 import { PackageManager } from './package-manager.js';
 import { ask } from './questions.js';
 

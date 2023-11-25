@@ -19,8 +19,8 @@ export default defineConfig([
     },
     {
         ...shared,
-        entry: ['src/bin.ts'],
-        format: ['esm'],
+        entry: { bin: 'src/cli/index.ts' },
+        format: 'esm',
         banner: {
             js: '#!/usr/bin/env -S node --enable-source-maps',
         },
