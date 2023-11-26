@@ -117,7 +117,7 @@ export function writeJson(path: string, data: unknown) {
 
 export const templateDir = path.resolve(
     __dirname,
-    __dirname === 'dist' ? '..' : '../..',
+    path.basename(__dirname) === 'dist' ? '..' : '../..',
     'template',
 );
 
