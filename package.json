@@ -50,7 +50,7 @@
     },
     "homepage": "https://github.com/A7mooz/ts-gen#readme",
     "dependencies": {
-        "@clack/prompts": "^0.7.0",
+        "@clack/prompts": "^0.11.0",
         "colorette": "^2.0.20",
         "execa": "^8.0.1",
         "gradient-string": "^2.0.2",
@@ -80,5 +80,5 @@
         "access": "public",
         "provenance": true
     },
-    "packageManager": "pnpm@8.15.1"
+    "packageManager": "pnpm@8.15.9"
 }
